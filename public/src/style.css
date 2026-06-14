@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    padding: 3rem;
+    background-color: rgb(35, 35, 31);
+}
+
+h1 {
+    text-align: center;
+    color: gold;
+    margin-bottom: 3rem;
+}
+
+p {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: block;
+    width: 500px;
+    margin: 1rem auto;
+    color: rgb(157, 251, 251)
+}
+
+input[type=text] {
+    border: 3px gold solid;
+    border-radius: 10px;
+    display: block;
+    margin: 1rem auto;
+    width: 90%;
+    height: 2rem;
+}
+
+input[type=submit] {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+    width: fit-content;
+    border: 2px red solid;
+    border-radius: 10px;
+    background-color: goldenrod;
+    color: white;
+}
