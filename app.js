@@ -1,7 +1,23 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+require('dotenv').config();
 const PORT = 3000;
+
+//OpenAI Snippet
+const OpenAI = require('openai');
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+async function run(answer1, answer2, answer3) {
+    const response = await client.responses.create({
+        model: "gpt-5.5",
+        input: `Write a short hokku in English about ${answer1} eating or cooking ${answer2} during ${answer3}.`,
+    });
+
+    console.log(response.output_text);
+}
+
+//run();
+// -----------------
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
@@ -12,7 +28,7 @@ app.get('/', (req, res) => {
 app.post('/usersend', (req, res) => {
     const name = req.body.yourName, meal = req.body.meal, season = req.body.season;
     res.send(`The answer is ${name}, ${meal}, and ${season}`);
-
+    run(name, meal, season);
 })
 
 app.listen(PORT, () => {
