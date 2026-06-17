@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
-    <title>Welcome to a poetry cave</title>
+    <title>Hokku Master — Generate a Personalized Hokku</title>
 </head>
+
 <body>
-    <h1>Welcome to Hokku Master</h1>
-    <p>Kindly fill up the form to receive a hokku about yourself</p>
-    <form action="/usersend" method="POST">
-        <label for="yourName">Please, enter your full name</label><br>
-        <input type="text" name="yourName" id="yourName" required>
-        <label for="meal">What is your favorite food?</label><br>
-        <input type="text" name="meal" id="meal" required>
-        <label for="season">And, the last, what is your favorite season?</label><br>
-        <input type="text" name="season" id="season" required><br>
-        <input type="submit" value="Request a rhyme">
-    </form>
-    
+    <main>
+        <h1>Welcome to Hokku Master</h1>
+        <p>Kindly fill up the form to receive a hokku about yourself</p>
+
+        <form action="/usersend" method="POST">
+            
+                
+
+                <label for="yourName">Please, enter your full name</label>
+                <input type="text" name="yourName" id="yourName" autocomplete="name" required>
+
+                <label for="meal">What is your favorite food?</label>
+                <input type="text" name="meal" id="meal" autocomplete="off" required>
+
+                <label for="season">And, the last, what is your favorite season?</label>
+                <input type="text" name="season" id="season" autocomplete="off" required>
+            
+
+            <input type="submit" value="Request a rhyme">
+        </form>
+    </main>
 </body>
 </html>
