@@ -50,7 +50,7 @@ p {
 .rhyme {
     display: block;
     margin: 1rem auto 0;
-    padding: 1rem 3rem 0;
+    padding: 1rem;
     width: max-content;
 }
 
