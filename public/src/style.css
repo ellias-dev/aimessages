@@ -1,25 +1,41 @@
-* {
+/* Reset */
+*,
+*::before,
+*::after {
     margin: 0;
-    padding: 0
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Theme */
+:root {
+    --bg: rgb(35, 35, 31);
+    --text: white;
+    --accent: gold;
+    --accent-dark: goldenrod;
+    --border: red;
+}
+
+/* Base */
 body {
     padding: 3rem;
-    background-color: rgb(35, 35, 31);
+    background-color: var(--bg);
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
 }
 
 h1 {
     text-align: center;
-    color: gold;
+    color: var(--accent);
     margin-bottom: 3rem;
-
 }
 
 p {
-    color: white;
+    color: var(--text);
     text-align: center;
     margin-bottom: 2rem;
 }
+
 
 .response {
     font-size: 2rem;
@@ -28,9 +44,9 @@ p {
 
 .rhyme {
     display: block;
-    margin: 1rem auto 0 auto;
-    padding: 1rem 3rem 0 3rem;
-    width: fit-content;
+    margin: 1rem auto 0;
+    padding: 1rem 3rem 0;
+    width: max-content;
 }
 
 .cite {
@@ -39,41 +55,53 @@ p {
     font-style: italic;
 }
 
+
 form {
     display: block;
-    width: 500px;
+    width: min(500px, 90%);
     margin: 1rem auto;
-    color: rgb(157, 251, 251)
+    color: rgb(157, 251, 251);
 }
 
 input[type=text] {
-    border: 3px gold solid;
+    border: 3px solid var(--accent);
     border-radius: 10px;
     display: block;
     margin: 1rem auto;
     width: 90%;
     height: 2rem;
+    padding: 0 .5rem;
 }
 
+/* Buttons */
 input[type=submit],
 .button {
     display: block;
     margin: 1rem auto;
     padding: 1rem 2rem;
-    width: fit-content;
-    border: 1px red solid;
+    border: 1px solid var(--border);
     border-radius: 10px;
-    background-color: goldenrod;
-    color: white;
+    background-color: var(--accent-dark);
+    color: var(--text);
+    cursor: pointer;
+    transition: background-color .2s ease, border-color .2s ease;
 }
 
 .button.btn {
     text-decoration: none;
     margin: 5rem auto;
+    text-align: center;
 }
 
 input[type=submit]:hover,
 .button:hover {
-    background-color: gold;
-    border: 1px gold solid;
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* Focus states */
+input[type=text]:focus,
+.button:focus {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
 }
