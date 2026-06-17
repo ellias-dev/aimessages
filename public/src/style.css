@@ -45,6 +45,7 @@ p {
 .response {
     font-size: 2rem;
     font-style: italic;
+    overflow-wrap: break-word;
 }
 
 .rhyme {
@@ -109,4 +110,13 @@ input[type=text]:focus,
 .button:focus {
     outline: 3px solid var(--accent);
     outline-offset: 3px;
+}
+
+footer {
+    display: block;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
 }
