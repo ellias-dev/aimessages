@@ -4,7 +4,7 @@ const path = require('path');
 require('dotenv').config();
 const PORT = 3000;
 
-const responseRender = require('./responserender');
+const responseRender = require('./utils/responseRender');
 let snippet;
 //OpenAI Snippet
 const OpenAI = require('openai');
@@ -21,8 +21,7 @@ async function run(answer1, answer2, answer3) {
 
 }
 
-//run();
-// -----------------
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
