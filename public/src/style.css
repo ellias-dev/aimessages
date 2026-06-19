@@ -55,7 +55,7 @@ p {
     width: max-content;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480x) {
     .rhyme {
         width: 100%;
     }
