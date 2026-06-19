@@ -50,9 +50,19 @@ p {
 
 .rhyme {
     display: block;
-    margin: 1rem auto 0;
+    margin: 1rem auto;
     padding: 1rem;
     width: max-content;
+}
+
+@media (max-width: 400px) {
+    .rhyme {
+        width: 100%;
+    }
+
+    .response {
+        font-size: 1.5rem;
+    }
 }
 
 .cite {
@@ -110,13 +120,4 @@ input[type=text]:focus,
 .button:focus {
     outline: 3px solid var(--accent);
     outline-offset: 3px;
-}
-
-footer {
-    display: block;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-
 }
